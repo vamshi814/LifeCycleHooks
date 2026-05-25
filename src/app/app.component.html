@@ -20,7 +20,10 @@ component initialization
 <div class="2ndHook">
 
 
-    <app-parent2-ng-on-init></app-parent2-ng-on-init>
+    <p>ngOnInit</p>
+    <input type="text" #types>
+    <button (click)="onSubmit(types)">Submit</button>
+    <app-parent2-ng-on-init [msg]="inputVal"></app-parent2-ng-on-init>
 
 </div>
 

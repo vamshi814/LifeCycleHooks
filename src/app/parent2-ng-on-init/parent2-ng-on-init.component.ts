@@ -1,4 +1,4 @@
-import { Component, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-parent2-ng-on-init',
@@ -7,11 +7,18 @@ import { Component, OnChanges } from '@angular/core';
 })
 export class Parent2NgOnInitComponent implements OnChanges{
 
+  @Input() msg: string[] = [];
 
-  cosntructor() {
+  constructor() {
     console.log('constructor parent2 called...');
+    console.log('Msg : ' + this.msg);
   }
   ngOnChanges() {
-    console.log('ngOnChanges parent2 called');
+    console.log('ngOnChanges hook parent2 called');
+    console.log('Msg in parent2 ngOnChanges: ' + this.msg);
+  }
+  ngOnInit(){
+    console.log('ngOnInit hook parent2 called');
+    console.log('Msg in parent2 ngOnInit: ' + this.msg);
   }
 }

@@ -11,4 +11,16 @@ export class AppComponent {
     console.log('AppComponent Constructor called');
   }
 
+  // ngOnInit()-------------------------------------
+  // inputVal:string = '';
+  // suppose inputVal is not a string if it is string array
+    inputVal: string[] = ['helo','hi','welcome'];
+  onSubmit(types: HTMLInputElement) {
+    this.inputVal.push(types.value);
+    
+  }
+
+
+  //
+
 }
