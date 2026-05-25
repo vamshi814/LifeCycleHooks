@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'LifeCycleHooks';
+  constructor() {
+    console.log('AppComponent Constructor called');
+  }
+
 }
