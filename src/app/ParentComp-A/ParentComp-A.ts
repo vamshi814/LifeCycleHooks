@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ChildCompA } from '../ChildComp-A/ChildComp-A';
+import { UserService } from '../Services/UserService';
 
 @Component({
   selector: 'app-parent-comp-a',
@@ -10,7 +11,11 @@ export class ParentCompA {
     ParentVariableA: string = "Shivaji";
     ChildVariableFromParentA: string = "Sambhaji";
 
-    constructor() {
+    constructor(private userService: UserService) {
         console.log('ParentCompA Constructor called');
+    }
+
+    getUserNameFromService(): void {
+        console.log(this.userService.getUserName());
     }
 }
