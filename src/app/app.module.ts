@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Parent1CompInznComponent } from './parent1-comp-inzn/parent1-comp-inzn.component';
+import { ParentCompA } from './ParentComp-A/ParentComp-A';
+import { ChildCompA } from './ChildComp-A/ChildComp-A';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Parent1CompInznComponent
+    ParentCompA,
+    ChildCompA
   ],
   imports: [
     BrowserModule,

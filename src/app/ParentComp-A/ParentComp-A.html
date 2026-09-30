@@ -1,0 +1,18 @@
+<h3>
+    1.Constructor and Passing Data from Parent to Child Component using @Input Decorator
+</h3>
+<p>
+    Parent Component A - works
+    <br>
+    Parent Variable A: {{ ParentVariableA }}
+</p>
+
+<div>
+    <app-child-comp-a [ChildVariableA]="ChildVariableFromParentA">
+
+    </app-child-comp-a>
+</div>
+
+<p>
+    problem is that the child component is not able to access the value of the variable passed from the parent component in its constructor. 
+</p>
